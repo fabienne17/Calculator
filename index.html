@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+
+</head>
+<body>
+	<form name='calculator' id="calculator">
+		
+		<!-- Screen and clear key -->
+		<div name='top' class="top">
+			<input id="screen">
+			<input id="result">
+		</div>
+		<br>
+		<div class="top">
+			<input id="clear"  value="Clear" type='button' class="clear" onClick='clearScreen()'>
+			<input id="backspace"  value="Backspace" type='button' class="clear" onClick='clearLast()'>
+		</div>
+		
+		<div class="keys">
+			<!-- operators and other keys -->
+			<input id='seven' value='7' type='button' onClick='btnClick(seven.value)'>
+			<input id='eight' value='8' type='button' onClick='btnClick(eight.value)'>
+			<input id='nine' value='9' type='button' onClick='btnClick(nine.value)'>
+			<input id='plus' value='+'  type='button' onClick='btnClick(plus.value)' class='operator'>
+			<input id='four' value='4' type='button' onClick='btnClick(four.value)'>
+			<input id='five' value='5' type='button' onClick='btnClick(five.value)'>
+			<input id='six' value='6' type='button' onClick='btnClick(six.value)'>
+			<input id='minus' value='-' type='button' onClick='btnClick(minus.value)' class='operator'>
+			<input id='one' value='1' type='button' onClick='btnClick(one.value)'>
+			<input id='two' value='2' type='button' onClick='btnClick(two.value)'>
+			<input id='three' value='3' type='button' onClick='btnClick(three.value)'>
+			<input id='divide' value='/' type='button' onClick='btnClick(divide.value)' class='operator'>
+			<input id='zero' value='0' type='button' onClick='btnClick(zero.value)'>
+			<input id='decimal' value='.' type='button' onClick='btnClick(decimal.value)'>
+			<input id='evaluate' value='=' type='button' onClick='evaluation()' class='evaluation'>
+			<input id='multiply' value='*' type='button' onClick='btnClick(multiply.value)' class='operator'>
+		</div>
+	</form>
+	<script type="text/javascript" src='calc.js'></script>
+</body>
+</html>

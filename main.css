@@ -1,0 +1,122 @@
+
+/* Using box shadows to create 3D effects */
+#calculator {
+	width: 300px;
+	height: auto;
+	
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	
+	background: black;
+	border-radius: 6px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top portion */
+.top input.clear {
+	float: left;
+}
+
+.top #screen, .top #result {
+	width: 260px;
+	padding: 0 10px;
+	background: rgba(100, 100, 0, 0.2);
+	
+	/* Typography */
+	line-height: 40px;
+	color: gray;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Screen area */
+.top #screen {
+	height: 50px;
+	border-radius: 3px 3px 0px 0px;
+	font-size: 36px;
+}
+/* Results area */
+.top #result {
+	height: 40px;
+	border-radius: 0px 0px 3px 3px;
+	font-size: 24px;
+}
+
+/* Clear floats */
+.keys, .top {
+	overflow: hidden;
+}
+
+/* special buttons */
+.top input.clear {
+	position: center;
+	width: 120px;
+	height: 36px;
+	
+	margin: 0 5px 11px 5px;
+}
+
+/* regular buttons */
+.keys input {
+	float: left;
+	position: relative;
+	top: 0;
+
+	width: 57px;
+	height: 60px;
+
+	margin: 0px 3.5px 11px 3.5px;
+}
+
+/* Applying to the keys */
+.keys input, .top input.clear {	
+	cursor: pointer;
+	
+	background: #e8ebef;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	
+	font-size: 36px;
+	color: #111;
+	line-height: 36px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+.keys input.operator {
+	background: #c2c4c6;
+	margin-right: 0;
+}
+
+.keys input.evaluation {
+	background: #c2c4c6;
+}
+
+.top input.clear {
+	background: #71d1fc;
+	/*box-shadow: 0px 4px #009de4;*/
+	color: white;
+	font-size: 17px;
+}
+
+/* Some hover effects */
+.keys input:hover {
+	background: #71d1fc;
+	box-shadow: 0px 4px #009de4;
+	color: white;
+}
+
+.top input.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+
+
